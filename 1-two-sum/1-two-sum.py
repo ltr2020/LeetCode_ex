@@ -2,7 +2,10 @@ class Solution(object):
     def twoSum(self, nums, target):
         table = {}
         for i, val in enumerate(nums):
-            if target - val in table:
-                return table[target - val], i
+            remain = target - val
+            if remain in table:
+                return table[remain], i
             table[val] = i
+            
         return None
+     
