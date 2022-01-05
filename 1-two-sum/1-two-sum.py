@@ -7,5 +7,4 @@ class Solution(object):
                 return table[remain], i
             table[val] = i
             
-        return None
      
