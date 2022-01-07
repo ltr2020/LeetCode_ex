@@ -1,16 +1,14 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        if n <= 2:
+        if n <= 3:
             return n
         
-        prev1 = 1
-        prev2 = 2
+        a, b = 2, 3
         current = 0
         
-        for i in range(2,n):    #simulate fib no
-            current = prev1 + prev2
-            prev1 = prev2
-            prev2 = current
+        for i in range(3,n):    #simulate fib no
+            current = a + b
+            a, b = b, current
         return current
             
             
