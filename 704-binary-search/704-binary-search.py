@@ -1,7 +1,7 @@
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         low, high = 0, len(nums)-1
-        while low <= high:
+        while low <= high:  # to keep binary search ongoing
             mid = (low+high)//2
             if nums[mid] > target:
                 high = mid-1
