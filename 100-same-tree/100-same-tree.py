@@ -10,8 +10,7 @@ class Solution:
             return True 
         if p == None or q == None: # base case: if one of them is empty --> not the same tree
             return False
-        if p.val != q.val: # base case: both not empty but diff val -> diff tree
-            return False
-        
-        return (self.isSameTree(p.left, q.left) and\
-                self.isSameTree(p.right, q.right))
+
+        return p.val == q.val and\
+                self.isSameTree(p.left, q.left) and\
+                self.isSameTree(p.right, q.right)
