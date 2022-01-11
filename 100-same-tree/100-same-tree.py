@@ -10,7 +10,7 @@ class Solution:
         while len(stack):
             n1, n2 = stack.pop()
             if n1 == None and n2 == None:
-                continue
+                pass
             elif n1 == None or n2 == None or n1.val != n2.val: 
                 return False
             elif n1.val == n2.val:
