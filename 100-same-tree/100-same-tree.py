@@ -7,7 +7,7 @@
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         stack = [(p, q)]
-        while stack:
+        while len(stack):
             n1, n2 = stack.pop()
             if n1 == None and n2 == None:
                 pass
