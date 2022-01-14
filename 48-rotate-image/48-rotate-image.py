@@ -6,4 +6,4 @@ class Solution:
         import numpy as np
         matrix[:] = np.array(matrix)
         matrix[:] = np.flipud(matrix).T.tolist()
-        return matrix[:]
+        return matrix
