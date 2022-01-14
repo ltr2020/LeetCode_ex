@@ -5,6 +5,5 @@ class Solution:
         """
         import numpy as np
         matrix[:] = np.array(matrix)
-        ud = np.flipud(matrix)
-        matrix[:] = ud.T.tolist()
-        return matrix
+        matrix[:] = np.flipud(matrix).T.tolist()
+        return matrix[:]
