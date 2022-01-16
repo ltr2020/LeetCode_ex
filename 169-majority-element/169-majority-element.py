@@ -1,7 +1,14 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        from collections import Counter
-        Hash = Counter(nums)
-        for i, val in Hash.items():
-            if val > len(nums) / 2:
-                return i
+        majority = 0
+        count = 0
+        for num in nums:
+            if count == 0:
+                majority = num
+                
+            if num == majority:
+                count += 1	
+            else:
+                count -=1
+
+        return majority
